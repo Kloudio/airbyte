@@ -29,6 +29,7 @@ REPORT_MAPPING = {
     "geographic_report": "geographic_view",
     "keyword_report": "keyword_view",
     "account_labels": "customer_label",
+    "labels": "label",
 }
 
 

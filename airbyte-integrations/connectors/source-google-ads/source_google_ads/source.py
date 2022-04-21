@@ -33,7 +33,8 @@ from .streams import (
     KeywordReport,
     ShoppingPerformanceReport,
     UserLocationReport,
-    AccountLabels
+    AccountLabels,
+    Labels,
 )
 
 
@@ -130,7 +131,8 @@ class SourceGoogleAds(AbstractSource):
             Campaigns(**incremental_stream_config),
             CampaignLabels(google_api),
             ClickView(**incremental_stream_config),
-            AccountLabels(google_api)
+            AccountLabels(google_api),
+            Labels(google_api),
         ]
         custom_query_streams = [
             CustomQuery(custom_query_config=single_query_config, **incremental_stream_config)
