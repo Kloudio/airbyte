@@ -241,6 +241,13 @@ class CampaignLabels(GoogleAdsStream):
     # Note that this is a string type. Google doesn't return a more convenient identifier.
     primary_key = ["campaign_label.resource_name"]
 
+class AccountLabels(GoogleAdsStream):
+    """
+    Campaign labels stream: https://developers.google.com/google-ads/api/fields/v8/campaign_label
+    """
+
+    # Note that this is a string type. Google doesn't return a more convenient identifier.
+    primary_key = ["customer_label.resource_name"]
 
 class AdGroups(IncrementalGoogleAdsStream):
     """
